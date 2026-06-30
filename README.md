@@ -1,5 +1,3 @@
-Here is your comprehensive, enterprise-ready `README.md` file tailored specifically for your orchestrator repository. It is structurally designed to showcase deep technical engineering, design patterns, and deployment mechanics for senior engineers and team leads reviewing your architecture.
-
 ---
 
 # Modular Agentic Workflows System (Gemini SDK & Multi-Agent Architecture)
