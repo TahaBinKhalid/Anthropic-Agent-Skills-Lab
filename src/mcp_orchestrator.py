@@ -4,15 +4,12 @@ import urllib.request
 import urllib.error
 from dotenv import load_dotenv
 
-# Load local environment keys
 load_dotenv()
 
 class GeminiAgentOrchestrator:
     def __init__(self):
-        # Read your AQ. key from the environment variable file
         self.api_key = os.getenv("GEMINI_APIKEY")
         
-        # Hardcoded fallback safety if .env file can't be found across directories on Windows
         if not self.api_key:
             self.api_key = "GEMINI_API_KEY"
             
@@ -30,10 +27,8 @@ class GeminiAgentOrchestrator:
         
         print("[Orchestrator] Invoking Gemini Sub-Agent via Direct REST Pipeline...")
         
-        # Target the raw Google v1beta endpoint directly
         url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={self.api_key}"
         
-        # Build the exact json payload payload mapping system instructions and configurations
         payload = {
             "contents": [{
                 "parts": [{
@@ -61,7 +56,7 @@ class GeminiAgentOrchestrator:
         try:
             with urllib.request.urlopen(req) as response:
                 result = json.loads(response.read().decode("utf-8"))
-                # Parse out the returned text content cleanly
+        
                 return result["candidates"][0]["content"]["parts"][0]["text"]
         except urllib.error.HTTPError as e:
             error_msg = e.read().decode("utf-8")
