@@ -8,7 +8,7 @@ Traditional agent architectures suffer from compounding context window costs, hi
 
 ---
 
-## 🏗️ Architectural Overview
+## Architectural Overview
 
 Instead of forcing exhaustive development checklists and multi-step evaluation rules into every basic generation request, the parent orchestrator acts as a highly optimized, state-free routing layer. Sub-agent definitions, specialized tool configurations, and granular target behavioral constraints remain entirely decoupled until their respective triggers are explicitly evaluated.
 
@@ -30,7 +30,7 @@ Instead of forcing exhaustive development checklists and multi-step evaluation r
 
 ---
 
-## 🛠️ Repository File Structure
+## Repository File Structure
 
 ```text
 ├── .anthropic/
@@ -47,7 +47,7 @@ Instead of forcing exhaustive development checklists and multi-step evaluation r
 
 ---
 
-## ⚙️ Core Components
+## Core Components
 
 ### 1. The Skill Specification Layer (`SKILL.md`)
 
@@ -80,7 +80,7 @@ payload = {
 
 ---
 
-## 🚀 Installation & Local Verification
+## Installation & Local Verification
 
 ### Prerequisites
 
@@ -124,7 +124,7 @@ python src/mcp_orchestrator.py
 
 ---
 
-## 🔒 Security & Safe Commits
+## Security & Safe Commits
 
 This workspace includes built-in protective parameters designed to meet modern security compliance controls.
 
